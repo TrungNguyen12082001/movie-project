@@ -1,0 +1,51 @@
+/* desktop-first 
+Xây dựng web ở màn hình lớn trc, sau đó căn chỉnh cho phù hợp ở màn hình nhỏ sau
+*/
+
+.desktop-first {
+    background-color: red;
+    color: white;
+}
+/* max width */
+/* media Query */
+/* type: screen, speech, print */
+/* breakpoint: Kích thước của thiết bị */
+@media screen and (max-width: 1200px) {
+    /* Nếu màn hình có kích thước lớn nhất 1200px thì áp dụng code bên dưới */
+    /* Vùng ảnh hưởng nhở hơn bằng 1200px */
+    /* Màn hình lớn trc, màn hình nhỏ sau */
+    .desktop-first {
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-first {
+        background-color: pink;
+    }
+}
+
+/* mobile-first 
+Xây dựng web ở màn hình nhỏ trc, sau đó căn chỉnh cho phù hợp ở màn hình lớn sau
+*/
+/* Màn hình nhỏ trc, màn hình lớn sau */
+.mobile-first {
+    background-color: orange;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+     /* nếu màn hình lớn hơn hoặc bằng 768px thì áp dụng code bên dưới */
+    /* vùng phạm vi lớn hơn hoặc bằng 768px */
+    .mobile-first {
+        background-color: black
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* nếu màn hình lớn hơn hoặc bằng 1200px thì áp dụng code bên dưới */
+    /* vùng phạm vi lớn hơn hoặc bằng 1200px */
+    .mobile-first {
+        background-color: violet
+    }
+}

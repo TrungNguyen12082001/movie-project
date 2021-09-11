@@ -1,0 +1,487 @@
+html,body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ 
+/* HEADER */
+header {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-contact {
+    margin: 15px 0 0 0;
+}
+
+#movieNavbar .navbar-nav {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+#movieNavbar .nav-item::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    /* #fbbd61,#ec7532 */
+    /* Hướng trải từ trái qua phải:
+    trái: Vi trí màu bắt đầu (cam nhạt)
+    phải: Vị trí màu kết thúc (cam đậm) */
+    background: linear-gradient(to right, #fbbd61, #ec7532 );
+    transition: 0.5s;
+}
+
+.nav-link {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: .8em;
+    padding-bottom: 20px;
+    margin: 0 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Đã hover */
+#movieNavbar .nav-item:hover::after {
+    width: 100%;
+    
+}
+
+#movieNavbar .nav-item.active::after {
+    width: 100%;
+}
+
+/* MOIVECAROUSEL */
+
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.carousel-caption > p:first-child {
+    font-size: 14px;
+    color: #fbbd61;
+    letter-spacing: 2px;
+}
+
+.carousel-caption {
+    margin-bottom: 10%;
+}
+
+.carousel-caption h2 {
+    font-size: 52px;
+    font-weight: 300;
+    padding: 0;
+}
+
+.carousel-describe {
+    font-size: 18px;
+}
+
+.carousel-caption > div span {
+    padding: 15px;
+    margin-right: 8px;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 50%;
+}
+
+.carousel-caption > div button {
+    background: linear-gradient(to right, #fbbd61, #ec7532 );
+    font-size: 13px;
+    font-weight: 400;
+    border: none;
+    letter-spacing: 4px;
+    padding: 20px;
+    border-radius: 30px;
+    border-width: 2px;
+}
+
+/* NEW IN */
+/* .newIn-contents {
+    padding: 0 30px;
+} */
+
+
+
+.newIn h2 {
+    font-size: 18px;
+    margin-bottom: 40px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: #ec7532;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #d8d8d8;
+    
+}
+
+.newIn h2::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+}
+
+.newIn-img {
+    position: relative;
+    /* Che tất cả thẻ con nào nằm ngoài vùng nội dung của thẻ cha */
+    overflow: hidden;
+}
+
+.newIn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient( to bottom, #fbbd61, #ec7532);
+    /* Chưa hover */
+    transform: skewX(30deg) translateX(-125%);
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.newIn-play {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+    height: calc(100%);
+    padding-top: calc(100% - 158px);
+}
+
+.newIn-play:hover {
+    opacity: 1;    
+}
+
+.newIn-play .fa-play {
+    text-align: center;
+    padding: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 420px)
+{
+    .newIn-play {
+        padding-top: calc(100% - 188px);
+    }
+}
+
+.newIn-play a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+.newIn-play span {
+    font-size: 16px;
+    display: block;
+    color: #fff;
+}
+
+.newIn-name {
+    margin-top: 20px;
+}
+
+.newIn-name p {
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+.newIn-name .star-rating .fa-star {
+    color: #fbbd61;
+}
+
+.newIn-name .star-rating .grey {
+    color: #d8d8d8;
+}
+
+
+/* SHOWTIMES */
+.showTimes-title {
+    color: #4a4a4a;
+    font-size: 18px;
+    padding: 10px 30px 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.showTimes .nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    transition: 0.6s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.showTimes-name > span {
+    color: #ec7532;
+}
+
+.showTimes-name h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #101010;
+}
+
+.showTimes-name p {
+    font-size: 16px;
+    color: #717171;
+    margin: 0 0 20px;
+}
+
+.showTimes-name a {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #ec7532;
+    text-decoration: none;
+}
+
+.showTimes-name a:hover {
+    color: black;
+    transition: 0.6s;
+}
+
+.fa-clock {
+    font-size: 12px;
+    color: #4a4a4a;
+}
+
+.viewing-times {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #4a4a4a;
+    margin-top: 20px;
+}
+
+.certificate {
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px;
+    margin-left: 5px;
+    text-align: center;
+    letter-spacing: 0;
+    color: #fff;
+    border-radius: 50%;
+    background: #4a4a4a;
+}
+
+.running-time {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+/* Đã hover */
+/* transform: skewX(30deg) translateX(-30%); */
+.newIn-img:hover .newIn-overlay {
+    transform: skewX(30deg) translateX(-30%);
+}
+
+/* Responsive */
+@media screen and (max-width:575.98px) {
+    .newIn-img img {
+        width: 100%;
+    }
+}
+
+
+/* comingSoon */
+.comingSoon-contents h2 {
+    text-transform: uppercase;
+}
+
+.comingSoon {
+    background-color: black;
+    background-image: url(../img/img/slide-7.png);
+}
+
+.comingSoon-contents h2 {
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 3px solid #d8d8d8;
+}
+
+.comingSoon-img img {
+    width: 100%;
+    height: auto;
+    padding-top: 35px;
+}
+
+
+.comingSoon-contents {
+    padding-bottom: 0;
+}
+
+.comingSoon-content {
+    padding-top: 50px;
+}
+
+.comingSoon-content .comingSoon-type {
+    color: #ec7532;
+}
+
+.comingSoon-content h3 {
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.comingSoon-content p {
+    color: #fff;
+}
+
+.comingSoon a {
+    font-size: 12px;
+    color: #ec7532;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.comingSoon-star {
+    color: #fbbd61;
+}
+
+.fa-calendar-alt {
+    color: #fff;
+}
+
+.calendar-coming {
+    color: #fff;
+}
+
+.slick-slide {
+    margin: 50px 0;
+    
+}
+
+.slick-slide h5 {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.slick-slide span {
+    color: #fff;
+    font-size: 14px;
+    opacity: .5;
+    text-align: center;
+}
+
+
+/* CONTACT */
+.contact p:first-child {
+    font-size: 23px;
+    color: #4a4a4a;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.contact p:last-child {
+    font-size: 46px;
+    color:#ec7532;
+    font-weight: 400;
+}
+
+
+/* FOOTER */
+.footer {
+    padding: 75px 0 0;
+    background-color: #101010;
+    color: white;
+}
+
+.footer h6 {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #ec7532;
+    border: none;
+    padding-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li {
+    padding: 3px 0;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.copy-right {
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.copy-right span > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copy-right span > a:hover {
+    color: #ec7532;
+    transition: 0.5s;
+}
+
+
+.footer-contents .fa-facebook-f {
+    margin-right: 10px;
+    color: #fff;
+    opacity: .5;
+}
+
+.footer-contents .fa-twitter {
+    margin-right: 5px;
+    color: #fff;
+    opacity: .5;
+}
+
+.footer-contents .fa-google-plus-g {
+    margin-right: 4px;
+    color: #fff;
+    opacity: .5;
+}
+
+.footer-contents .fa-facebook-f:hover {
+    color:#fbbd61;
+}
+
+.footer-contents .fa-twitter:hover {
+    color: #fbbd61;
+}
+
+.footer-contents .fa-google-plus-g:hover {
+    color: #fbbd61;
+}
